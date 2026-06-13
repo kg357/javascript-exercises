@@ -7,8 +7,18 @@
  The greeting should read: "Hello! My name is Carlos Stevenson and I am 18 years old."
 */
 
+const { thisYear, birthYear } = require("./joinStrings-example")
+
 // Add your code right below, good luck!
 
+const firstName = 'Carlos'
+const lastName = 'Stevenson'
+
+const fullName = firstName + " " + lastName
+let age = thisYear - birthYear
+
+let greeting = `Hello! My name is ${fullName} and I am ${age} years old.`
+console.log(greeting)
 
 
 
