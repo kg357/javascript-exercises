@@ -1,24 +1,15 @@
 
 const palindromes = function (text) {
 
-    let copy = text.toLowerCase();
-    let splitCopy = copy.split("");
+    let reversedText = removePunctuationsAndSpaces(
+        text.toLowerCase().split(""))
+        .reverse().join("");
 
-    let filteredCopy = removePunctuationsAndSpaces(splitCopy);
+    let cleanText = removePunctuationsAndSpaces(
+        text.toLowerCase().split("")).join("");
 
-    let reversedList = filteredCopy.reverse();
-    let reversedText = reversedList.join("");
-    let splitText = text.toLowerCase().split("");
-
-    let filteredText = removePunctuationsAndSpaces(splitText);
-
-    let cleanText = filteredText.join("");
-    if (cleanText === reversedText) {
-        return true;
-    } else {
-        return false;
-    }
-
+    return cleanText === reversedText ? true : false;
+    
 };
 
 function removePunctuationsAndSpaces(characters) {
